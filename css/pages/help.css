@@ -1,0 +1,29 @@
+textarea {
+    resize: none;
+    flex: 1;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+ul li label {
+    flex: 0.3;
+}
+
+ul li input {
+    flex: 1;
+}
+
+ul div button {
+    margin: 2px 8px 0px 8px;
+    padding: 4px;
+}
+
+ul div {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
