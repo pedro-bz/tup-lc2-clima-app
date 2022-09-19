@@ -1,15 +1,69 @@
 form div {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 10px;
+    font-weight: bold;
 }
 
-div button {
-    margin: 6px 0px 0px 0px;
-    padding: 6px;
+form div input {
+    margin: 4px 0px 0px 2px;
+    height: 40px;
+    width: 244px;
+    border-radius: 6px;
+    border-width: 1px;
+    font-size: 22px;
+    text-align: center;
 }
 
-form input {
-    flex: 1;
-    margin: 0px 0px 0px 2px;
+form div button {
+    margin: 3px 0px 0px 0px;
+    height: 42px;
+    width: 86px;
+    color: white;
+    background-color: var(--color-theme);
+    border-radius: 8px;
+    border-width: 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.messages {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.messages div {
+    margin: 15px;
+    height: 54px;
+    width: 410px;
+    border-radius: 16px;
+    text-align: center;
+    line-height: 150%;
+    font-size: .80em;
+    color: white;
+}
+
+.messages div > label {
+    padding-top: 10px;
+}
+
+#success-msg {
+    background-color: #28a745;
+    padding-top: 17px;
+}
+
+#error-msg {
+    background-color: #dc3545;
+    padding: 10px 12px 0px 12px;
+    height: 58px;
+}
+
+#warning-msg {
+    background-color: #ffc107;
+    padding-top: 17px;
 }

@@ -1,29 +1,69 @@
+form ul li {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 340px;
+}
+
+form ul li label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
 textarea {
-    resize: none;
-    flex: 1;
+    border-radius: 6px;
+    border-width: 1px;
+    text-indent: 4px;
 }
 
-ul li {
+form ul li input {
+    height: 40px;
+    border-radius: 6px;
+    border-width: 1px;
+    font-size: 22px;
+    text-align: center;
+}
+
+form ul div button {
+    margin: 3px;
+    height: 38px;
+    width: 76px;
+    color: white;
+    background-color: var(--color-theme);
+    border-radius: 8px;
+    border-width: 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form ul div {
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
 
-ul li label {
-    flex: 0.3;
-}
-
-ul li input {
-    flex: 1;
-}
-
-ul div button {
-    margin: 2px 8px 0px 8px;
-    padding: 4px;
-}
-
-ul div {
+.messages {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    margin-top: 36px;
+}
+
+.messages div {
+    margin: 15px;
+    height: 54px;
+    width: 410px;
+    border-radius: 16px;
+    text-align: center;
+    line-height: 150%;
+    font-size: .80em;
+    color: white;
+}
+
+.messages #error-msg {
+    background-color: #dc3545;
+    padding: 14px;
+    height: 50px;
 }
