@@ -62,8 +62,23 @@ form ul div {
     color: white;
 }
 
-.messages #error-msg {
+#error-msg-1 {
+    display: none;
     background-color: #dc3545;
+    padding: 14px;
+    height: 50px;
+}
+
+#error-msg-2 {
+    display: none;
+    background-color: #dc3545;
+    padding: 14px;
+    height: 50px;
+}
+
+#success-msg {
+    display: none;
+    background-color: rgb(4, 175, 4);
     padding: 14px;
     height: 50px;
 }

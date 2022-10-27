@@ -53,17 +53,20 @@ form div button {
 }
 
 #success-msg {
+    display: none;
     background-color: #28a745;
     padding-top: 17px;
 }
 
 #error-msg {
+    display: none;
     background-color: #dc3545;
     padding: 10px 12px 0px 12px;
     height: 58px;
 }
 
 #warning-msg {
+    display: none;
     background-color: #ffc107;
     padding-top: 17px;
 }

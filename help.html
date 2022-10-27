@@ -8,6 +8,9 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pages/help.css">
+    <!-- Javascript -->
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/help.js" defer></script>
 </head>
 
 <body>
@@ -36,37 +39,43 @@
             </div>
         </section>
         <section>
-            <form action="">
+            <form>
                 <ul>
                     <li>
-                        <label for="">Nombre:</label>
-                        <input type="text">
+                        <label for="nombre">Nombre:</label>
+                        <input name="name" id="name" type="text" required>
                     </li>
                     <li>
-                        <label for="">Email:</label>
-                        <input type="text">
+                        <label for="email">Email:</label>
+                        <input name="email" id="email" type="email" required>
                     </li>
                     <li>
-                        <label for="">Mensaje:</label>
-                        <textarea name="" id="" cols="30" rows="10" maxlength="255"
+                        <label for="sent-message">Mensaje:</label>
+                        <textarea required name="sent-message" id="sent-message" cols="30" rows="10" maxlength="255"
                             placeholder="Enter a message..."></textarea>
                     </li>
                     <div>
-                        <button type="reset">Limpiar</button>
-                        <button type="submit">Enviar</button>
+                        <button onclick="cleanMessage()" type="reset">Limpiar</button>
+                        <button type="button" id="submit-button">Enviar</button>
                     </div>
                 </ul>
             </form>
         </section>
         <section class="messages">
-            <div id="error-msg">
+            <div id="error-msg-1">
                 <label>Ingrese un <strong>Email</strong> válido</label>
+            </div>
+            <div id="error-msg-2">
+                <label>Ingrese un <strong>Nombre</strong> válido</label>
+            </div>
+            <div id="success-msg">
+                <label>Su consulta ha sido enviada correctamente</label>
             </div>            
         </section>
     </main>
     <footer>
         <p>
-            Desarrollado con ♥ - LC2 (Pedro Benzina)
+            Desarrollado con ♥ - Pedro Benzina
         </p>
     </footer>
 </body>
