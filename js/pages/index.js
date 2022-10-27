@@ -17,6 +17,7 @@ let queryWeatherButton = document.getElementById('query-weather');
 queryWeatherButton.addEventListener("click", function() {
     // Segun la ciudad seleccionada en el 'select', despliega el clima actual
     //   de la misma consultando a la API mediante el objeto 'weather'.
+
     let selectCity = document.getElementById('added-cities');
     let city = selectCity.value;
     if (city == 0) {
@@ -54,25 +55,4 @@ let weather = {
         document.querySelector(".wind").innerText = "Velocidad del viento: " + speed + "m/s";
         document.querySelector(".pressure").innerText = "Presión: " + pressure + " P";
     }
-}
-
-function getCitiesFromLocalStorage() {
-    // Devuelve un array conteniendo las ciudades existentes en el localStorage.
-    let cities = localStorage.getItem("CITIES");
-    if (cities) {
-        cities = JSON.parse(cities);
-    } else {
-        cities = [];
-    }
-    return cities;
-}
-
-function capitalize(_string) {
-    // Pone el primer caracter de cada palabra en el string en mayúsculas.
-    const arr = _string.split(" ");
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-    }
-    const _string2 = arr.join(" ");
-    return _string2
 }

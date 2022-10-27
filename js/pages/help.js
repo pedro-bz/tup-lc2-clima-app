@@ -1,7 +1,8 @@
 let submitButton = document.getElementById('submit-button');
 submitButton.addEventListener("click", function () {
     // Al hacer click en el boton 'Enviar', se validaran los datos y si todo
-    //      sale bien, se limpiaran los campos. Simulando un submit.
+    //   sale bien, se limpiaran los campos. Simulando un submit.
+
     validateFields()
     cleanFields()
 })
@@ -62,17 +63,6 @@ function cleanFields() {
     document.getElementById('name').value = "";
     document.getElementById('email').value = "";
     document.getElementById('sent-message').value = "";
-}
-
-function stringContainsNumber(_input) {
-    // Verifica si un string contiene numeros o no.
-    let string1 = String(_input);
-    for (let i = 0; i < string1.length; i++) {
-        if (!isNaN(string1.charAt(i)) && !(string1.charAt(i) == " ")) {
-            return true;
-        }
-    }
-    return false;
 }
 
 function validateEmail(input) {

@@ -2,6 +2,7 @@ let addCityButton = document.getElementById("add-button");
 addCityButton.addEventListener("click", async function () {
     // Toma la ciudad ingresada, y mediante las validaciones necesarias
     // determina si se agrega o no la ciudad al localStorage.
+
     let city = document.getElementById("new-city").value
     if (city == "" || city == " "){
         alert("Ingrese una ciudad para agregar")
@@ -39,17 +40,6 @@ let cityToValidate = {
     }
 }
 
-function getCitiesFromLocalStorage() {
-    // Devuelve un array conteniendo las ciudades existentes en el localStorage.
-    let cities = localStorage.getItem("CITIES");
-    if (cities) {
-        cities = JSON.parse(cities);
-    } else {
-        cities = [];
-    }
-    return cities;
-}
-
 function addNewCityToLocalStorage(newCity) {
     // Añade la ciudad enviada como parametro al localStorage.
     let cities = getCitiesFromLocalStorage();
@@ -78,15 +68,4 @@ function showMessage(messageType) {
         default:
             break;
     }
-}
-
-function stringContainsNumber(_input) {
-    // Verifica si un string contiene numeros o no.
-    let string1 = String(_input);
-    for (let i = 0; i < string1.length; i++) {
-        if (!isNaN(string1.charAt(i)) && !(string1.charAt(i) == " ")) {
-            return true;
-        }
-    }
-    return false;
 }
