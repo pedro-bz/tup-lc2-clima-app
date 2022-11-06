@@ -13,6 +13,11 @@ function addOptions() {
     });
 }
 
+function load() {
+    document.querySelector(".loader").style.display = "none"
+    document.querySelector(".card").style.display = "flex"
+}
+
 let queryWeatherButton = document.getElementById('query-weather');
 queryWeatherButton.addEventListener("click", function() {
     // Segun la ciudad seleccionada en el 'select', despliega el clima actual
@@ -24,6 +29,8 @@ queryWeatherButton.addEventListener("click", function() {
         alert("Seleccione una ciudad para consultar el clima. O agregue una nueva desde la pestaña 'Agregar Ciudad'.")
     } else {
         weather.fetchWeather(city);
+        document.querySelector(".loader").style.display = "block"
+        setTimeout(load, 1000)
     }
 })
 
@@ -45,7 +52,7 @@ let weather = {
         const { temp, feels_like, pressure, humidity } = data.main;
         const { speed } = data.wind;
         
-        document.querySelector(".card").style.display = "flex"
+        // document.querySelector(".card").style.display = "flex"
         document.querySelector(".city").innerText = name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
         document.querySelector(".description").innerText = "Estado actual: " + capitalize(description);

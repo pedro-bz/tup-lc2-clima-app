@@ -1,10 +1,11 @@
-section > form div {
+section>form div {
     display: inline-flex;
     justify-content: center;
     align-items: baseline;
 }
 
-section > form div select, button {
+section>form div select,
+button {
     margin: 10px 4px 6px 4px;
     padding: 2px;
     font-size: 16px;
@@ -44,4 +45,25 @@ h3 {
     margin: 6px 14px 8px 14px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.loader {
+    display: none;
+    margin: 120px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #02947eb3;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin .6s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
