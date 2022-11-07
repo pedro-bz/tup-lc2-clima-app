@@ -23,6 +23,7 @@ queryWeatherButton.addEventListener("click", function() {
     // Segun la ciudad seleccionada en el 'select', despliega el clima actual
     //   de la misma consultando a la API mediante el objeto 'weather'.
 
+    document.querySelector(".card").style.display = "none"
     let selectCity = document.getElementById('added-cities');
     let city = selectCity.value;
     if (city == 0) {
